@@ -1,3 +1,30 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+    const placeholder = document.getElementById("navbar-placeholder");
+
+
+    if (placeholder) {
+        fetch("navbar.html")
+            .then(response => {
+                // check if the file is founded
+                if (!response.ok) {
+                    throw new Error("Something went wrong with the network");
+                }
+                return response.text(); // Takes HTML as a text
+            })
+            .then(data => {
+                placeholder.innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error fetching navbar", error);
+                // (Διόρθωσα και το τυπογραφικό "meny" σε "menu")
+                placeholder.innerHTML = "<p> Error loading menu </p>"; 
+            });
+    }
+});
+
+
+//2.carousel code
 const scrollLeftButton = document.getElementById("scroll-left");
 const scrollRightButton = document.getElementById("scroll-right");
 const row = document.querySelector(".figure-wrapper");
