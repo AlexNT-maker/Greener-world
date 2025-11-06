@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//2.carousel code
+//2.carousel code---------------------------------------------------------------------------------------------------
 const scrollLeftButton = document.getElementById("scroll-left");
 const scrollRightButton = document.getElementById("scroll-right");
 const row = document.querySelector(".figure-wrapper");
@@ -44,3 +44,14 @@ if (scrollLeftButton && scrollRightButton && row){
 } else{
     console.error("Not found the details of carousel")
 }
+
+
+//3. product card transformation ease-in-out on click pick the image-----------------------------------------------
+
+const allProductCards= document.querySelectorAll(".product-card");
+
+allProductCards.forEach(function(card){
+    card.addEventListener("click", function(){
+        card.classList.toggle("zoomed");
+    });
+});
