@@ -3,9 +3,25 @@
   box-sizing: border-box;
 }
 
+@keyframes logo-pulse{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to{
+        transform: scale(1.1);
+        opacity:(0.7);
+    }
+}
+
+.header-left img:hover{
+    animation-name: logo-pulse;
+    animation-duration: 2s ;
+}
 
 header{
-    background-color: #AD9BAA;
+    background-color: #8A9A5B;
     display: flex;
     align-items: center;
     position: relative;
@@ -55,7 +71,7 @@ max-width: 100%;
 
 .nav-bar a:hover{
     cursor: pointer;
-    color: #ccc;
+    color: #000;
 }
 
 
@@ -126,7 +142,7 @@ color: #ffff;
 .hero-button{
     display: inline-block;
     padding: 12px 24px;
-    background-color: #AD9BAA; 
+    background-color: #8A9A5B; 
     color: white;
     text-decoration: none; 
     font-weight: bold;
@@ -136,7 +152,7 @@ color: #ffff;
 
 .hero-button:hover{
     cursor: pointer;
-    background-color: #8a7c88;
+    background-color: #000;
 }
 
 
@@ -362,6 +378,71 @@ padding: 10px;
     cursor: pointer;
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.seeds{
+    max-width: 480px;
+    background-color: #8A9A5B;
+    max-height: 480px;
+    justify-content: center;
+    display: block;
+    text-align: center;
+    margin-left: 35%;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 2px  #8A9A5B;
+    border: 10px solid #8A9A5B;
+    
+}
+
+#seeds-alert{
+    justify-content: center;
+    text-align: center;
+    display: block;
+    max-width: 100%;
+}
+
+.products-main{
+    background-color: #8A9A5B;
+    
+}
+
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.button-cart {
+  display:flex;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+
+}
+
+.button-cart .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button-cart svg path {
+  transition: 400ms;
+}
+
+.button-cart:hover {
+  background-color: transparent;
+}
+
+.button-cart:hover .text {
+  color: #181717;
+}
+
+.button-cart:hover svg path {
+  fill: #181717;
 }
 
 
