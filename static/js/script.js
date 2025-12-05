@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => {
                 console.error("Error fetching navbar", error);
-                // (Διόρθωσα και το τυπογραφικό "meny" σε "menu")
                 placeholder.innerHTML = "<p> Error loading menu </p>"; 
             });
     }
