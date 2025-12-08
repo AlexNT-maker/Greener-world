@@ -46,7 +46,7 @@ header{
     font-family:'Courier New', Courier, monospace;
     padding: 0 20px; 
     height: 130px; 
-    border: bottom 2px;
+    border-bottom: 2px solid #ffff;
 
 }
 
@@ -399,7 +399,12 @@ padding: 10px;
 
 .products-main{
     background-color: #8A9A5B;
-    
+}
+
+.career-container{
+    display: block;
+    justify-content: center;
+    text-align: center;
 }
 
 
