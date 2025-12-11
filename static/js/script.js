@@ -64,8 +64,7 @@ document.addEventListener('DOMContentLoaded', function(){
         'IT': {
             title: 'IT Specialist',
             description:`We are looking for a tech-savy individual to maintain our websites and servers.
-             Nice to have:
-             Experience with HTML CSS Js and SQL`,
+             Nice to have: Experience with HTML CSS JS and SQL`,
              btnText:'Apply for this position'
         },
         'Customer':{
@@ -81,7 +80,8 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         'Agronomist':{
             title: 'Agronomist',
-            description: 'Join our scientific team to ensure health and grow of our innovation species. Required: Bsc in Agronomy',
+            description: `Join our scientific team to ensure health and grow of our innovation species.
+             Required: Bsc in Agronomy`,
             btnText: 'Apply for this position'
         },
         'Decorator':{
@@ -127,5 +127,17 @@ dropdownItems.forEach(item=>{
             console.error('No data found for key:', jobKey);
         }
     });
+});
+});
+
+//5. Loader hidden-------------------------------------------------------------------------------------------------
+
+window.addEventListener("load", function(){
+const loader = this.document.getElementById("loader");
+
+loader.classList.add("loader-hidden");
+
+loader.addEventListener("transitionend", function(){
+    document.body.removeChild(loader);
 });
 });

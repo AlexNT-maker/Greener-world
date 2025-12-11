@@ -3,6 +3,21 @@
   box-sizing: border-box;
 }
 
+:root{
+    --primary-green: #8A9A5B;
+
+    --dark-bg: #333333;
+
+    --accent-purple: #AD9BAA;
+
+    --light-mint: #E2F3F1;
+
+    /* Basic colors */
+
+    --white: #ffffff;
+    --black: #000000;
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -45,7 +60,7 @@ img{
 }
 
 header{
-    background-color: #8A9A5B;
+    background-color: var(--primary-green);;
     display: flex;
     align-items: center;
     position: sticky;
@@ -137,19 +152,19 @@ color: #ffff;
 }
 
 .hero-link{
-    border: 3px solid #8A9A5B;
+    border: 3px solid var(--primary-green);;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #ffff;
     text-decoration: none;
-    background-color: #8A9A5B;
+    background-color: var(--primary-green);;
     display: inline-block;
     padding: 10px;
 }
 
 .hero-link:hover{ 
     cursor: pointer;
-    color: #8A9A5B;
+    color: var(--primary-green);;
     background-color: #ffff;
 }
 
@@ -266,7 +281,7 @@ color: #ffff;
     border-radius: 18px;
     box-shadow: -3px 3px 5px 5px   #333;
    padding-left: 18px;
-    background-color: #E2F3F1;
+    background-color: var(--light-mint);
     max-width: 160px;
     max-height: 280px;
     color: #000;
@@ -348,10 +363,10 @@ color: #ffff;
     width: fit-content;
     min-width: 200px;
     padding: 10px;
-    box-shadow: 3px 3px 3px #333333;
-    border: 2px solid #333333;
-    background-color: #333333;
-    color: #E2F3F1;
+    box-shadow: 3px 3px 3px var(--dark-bg);
+    border: 2px solid var(--dark-bg);
+    background-color: var(--dark-bg);
+    color: var(--light-mint);
     font-weight:lighter;
     font-family:sans-serif;
     
@@ -362,17 +377,17 @@ color: #ffff;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    background-color: #8A9A5B;
+    background-color: var(--primary-green);;
     padding: 0;
 }
 
 .product-card {
-    border: 3px solid #333333;
+    border: 3px solid var(--dark-bg);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 3px 5px #8A9A5B;
+    box-shadow: 0px 3px 5px var(--primary-green);;
     margin-top: 20px;
-    background-color: #333333;
+    background-color: var(--dark-bg);
     color: white;
     transition: transform 0.3s ease-in-out;
 }
@@ -399,15 +414,15 @@ padding: 10px;
 
 .seeds{
     max-width: 480px;
-    background-color: #8A9A5B;
+    background-color: var(--primary-green);;
     max-height: 480px;
     justify-content: center;
     display: block;
     text-align: center;
     margin-left: 35%;
     margin-bottom: 50px;
-    box-shadow: 2px 2px 2px  #8A9A5B;
-    border: 10px solid #8A9A5B;
+    box-shadow: 2px 2px 2px  var(--primary-green);;
+    border: 10px solid var(--primary-green);;
     
 }
 
@@ -419,7 +434,7 @@ padding: 10px;
 }
 
 .products-main{
-    background-color: #8A9A5B;
+    background-color: var(--primary-green);;
 }
 
 .career-container{
@@ -517,6 +532,34 @@ padding: 10px;
     }
 }
 
+#job-details{
+    white-space: pre-line;
+}
+
+
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    background-color: var(--primary-green);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+
+    transition: opacity 0.5s ease, visibility 0.5s;
+
+    
+}
+
+#loader.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
 
 /* From Uiverse.io by JaydipPrajapati1910 */ 
 .button-cart {
