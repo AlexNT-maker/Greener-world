@@ -616,13 +616,16 @@ padding: 10px;
     display: block;
     justify-content: center;
     text-align: center;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 95%;
     max-width: 800px;
     min-height: 100px;
-    box-shadow: 0 -3px 2px 3px var(--accent-purple);
     overflow: scroll;
     overflow-x: auto;
+}
+
+.goals-explain{
+    margin: 20px auto 2px ;
 }
 
 /* From Uiverse.io by JaydipPrajapati1910 */ 
