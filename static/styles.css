@@ -54,10 +54,12 @@ img{
     gap: 30px;
 }
 
-.header-left img:hover{
+.header-left:hover{
     animation-name: logo-pulse;
-    animation-duration: 2s ;
+    animation-duration: 2s;
 }
+
+
 
 header{
     background-color: var(--primary-green);;
@@ -75,7 +77,6 @@ header{
     border-bottom: 2px solid #ffff;
 
 }
-
 
 #navbar-placeholder{
     grid-area: navbar-placeholder;

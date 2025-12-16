@@ -1,0 +1,182 @@
+<svg width="80" height="80" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg"
+    class="drop-shadow-2xl"
+    data-fg-eamk0="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:13:5:220:7243:e:svg::1">
+    <defs data-fg-eamk2="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:22:7:429:1939:e:defs">
+        <radialGradient id="leafGradient1" cx="30%" cy="30%"
+            data-fg-eamk4="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:24:9:502:235:e:radialGradient">
+            <stop offset="0%" stop-color="#b8c89d"
+                data-fg-eamk5="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:25:11:566:40:e:stop"></stop>
+            <stop offset="50%" stop-color="#a3b578"
+                data-fg-eamk6="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:26:11:617:41:e:stop"></stop>
+            <stop offset="100%" stop-color="#8A9A5B"
+                data-fg-eamk7="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:27:11:669:42:e:stop"></stop>
+        </radialGradient>
+        <radialGradient id="leafGradient2" cx="30%" cy="30%"
+            data-fg-eamk8="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:29:9:746:235:e:radialGradient">
+            <stop offset="0%" stop-color="#c5d4ab"
+                data-fg-eamk9="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:30:11:810:40:e:stop"></stop>
+            <stop offset="50%" stop-color="#9fae73"
+                data-fg-eamk10="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:31:11:861:41:e:stop"></stop>
+            <stop offset="100%" stop-color="#7a8a4b"
+                data-fg-eamk11="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:32:11:913:42:e:stop"></stop>
+        </radialGradient>
+        <radialGradient id="leafGradient3" cx="30%" cy="30%"
+            data-fg-eamk12="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:34:9:990:235:e:radialGradient">
+            <stop offset="0%" stop-color="#aab887"
+                data-fg-eamk13="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:35:11:1054:40:e:stop"></stop>
+            <stop offset="50%" stop-color="#8A9A5B"
+                data-fg-eamk14="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:36:11:1105:41:e:stop"></stop>
+            <stop offset="100%" stop-color="#6b7a3c"
+                data-fg-eamk15="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:37:11:1157:42:e:stop"></stop>
+        </radialGradient>
+        <linearGradient id="potGradient" x1="0%" y1="0%" x2="100%" y2="100%"
+            data-fg-eamk17="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:41:9:1285:251:e:linearGradient">
+            <stop offset="0%" stop-color="#d4876f"
+                data-fg-eamk18="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:42:11:1365:40:e:stop"></stop>
+            <stop offset="50%" stop-color="#c4725a"
+                data-fg-eamk19="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:43:11:1416:41:e:stop"></stop>
+            <stop offset="100%" stop-color="#b35f47"
+                data-fg-eamk20="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:44:11:1468:42:e:stop"></stop>
+        </linearGradient>
+        <linearGradient id="stemGradient" x1="0%" y1="0%" x2="100%" y2="0%"
+            data-fg-eamk22="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:48:9:1584:250:e:linearGradient">
+            <stop offset="0%" stop-color="#6b5a3d"
+                data-fg-eamk23="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:49:11:1663:40:e:stop"></stop>
+            <stop offset="50%" stop-color="#8b7355"
+                data-fg-eamk24="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:50:11:1714:41:e:stop"></stop>
+            <stop offset="100%" stop-color="#6b5a3d"
+                data-fg-eamk25="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:51:11:1766:42:e:stop"></stop>
+        </linearGradient>
+        <radialGradient id="bgGradient" cx="50%" cy="50%"
+            data-fg-eamk27="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:55:9:1888:180:e:radialGradient">
+            <stop offset="0%" stop-color="#ffffff"
+                data-fg-eamk28="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:56:11:1949:40:e:stop"></stop>
+            <stop offset="100%" stop-color="#f5f7f0"
+                data-fg-eamk29="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:57:11:2000:42:e:stop"></stop>
+        </radialGradient>
+        <radialGradient id="cloverGradient" cx="30%" cy="30%"
+            data-fg-eamk31="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:61:9:2118:236:e:radialGradient">
+            <stop offset="0%" stop-color="#d4e0bc"
+                data-fg-eamk32="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:62:11:2183:40:e:stop"></stop>
+            <stop offset="60%" stop-color="#a3b578"
+                data-fg-eamk33="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:63:11:2234:41:e:stop"></stop>
+            <stop offset="100%" stop-color="#8A9A5B"
+                data-fg-eamk34="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:64:11:2286:42:e:stop"></stop>
+        </radialGradient>
+    </defs>
+    <circle cx="140" cy="140" r="135" fill="url(#bgGradient)"
+        data-fg-eamk36="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:69:7:2408:60:e:circle"></circle>
+    <circle cx="140" cy="140" r="135" fill="none" stroke="#e8edd9" stroke-width="3"
+        data-fg-eamk37="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:70:7:2475:81:e:circle"></circle>
+    <ellipse cx="140" cy="245" rx="50" ry="8" fill="#000000" opacity="0.1"
+        data-fg-eamk39="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:73:7:2601:73:e:ellipse"></ellipse>
+    <rect x="133" y="115" width="14" height="85" fill="url(#stemGradient)" rx="3"
+        data-fg-eamk41="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:76:7:2727:80:e:rect"></rect>
+    <rect x="136" y="115" width="3" height="85" fill="#a3916d" opacity="0.5"
+        data-fg-eamk42="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:77:7:2814:75:e:rect"></rect>
+    <ellipse cx="85" cy="145" rx="24" ry="36" fill="#6b7a3c" transform="rotate(-40 85 145)"
+        opacity="0.8"
+        data-fg-eamk44="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:80:7:2946:104:e:ellipse"></ellipse>
+    <ellipse cx="195" cy="145" rx="24" ry="36" fill="#6b7a3c" transform="rotate(40 195 145)"
+        opacity="0.8"
+        data-fg-eamk45="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:81:7:3057:105:e:ellipse"></ellipse>
+    <ellipse cx="95" cy="95" rx="28" ry="40" fill="url(#leafGradient1)"
+        transform="rotate(-25 95 95)"
+        data-fg-eamk47="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:84:7:3224:100:e:ellipse"></ellipse>
+    <ellipse cx="95" cy="95" rx="12" ry="18" fill="#e8edd9" transform="rotate(-25 95 95)"
+        opacity="0.6"
+        data-fg-eamk48="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:85:7:3331:102:e:ellipse"></ellipse>
+    <ellipse cx="82" cy="125" rx="26" ry="38" fill="url(#leafGradient2)"
+        transform="rotate(-35 82 125)"
+        data-fg-eamk49="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:87:7:3447:102:e:ellipse"></ellipse>
+    <ellipse cx="82" cy="125" rx="11" ry="16" fill="#d4e0bc" transform="rotate(-35 82 125)"
+        opacity="0.6"
+        data-fg-eamk50="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:88:7:3556:104:e:ellipse"></ellipse>
+    <ellipse cx="90" cy="160" rx="24" ry="34" fill="url(#leafGradient3)"
+        transform="rotate(-20 90 160)"
+        data-fg-eamk51="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:90:7:3674:102:e:ellipse"></ellipse>
+    <ellipse cx="90" cy="160" rx="10" ry="14" fill="#dbe5c5" transform="rotate(-20 90 160)"
+        opacity="0.6"
+        data-fg-eamk52="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:91:7:3783:104:e:ellipse"></ellipse>
+    <ellipse cx="185" cy="95" rx="28" ry="40" fill="url(#leafGradient1)"
+        transform="rotate(25 185 95)"
+        data-fg-eamk54="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:94:7:3950:101:e:ellipse"></ellipse>
+    <ellipse cx="185" cy="95" rx="12" ry="18" fill="#e8edd9" transform="rotate(25 185 95)"
+        opacity="0.6"
+        data-fg-eamk55="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:95:7:4058:103:e:ellipse"></ellipse>
+    <ellipse cx="198" cy="125" rx="26" ry="38" fill="url(#leafGradient2)"
+        transform="rotate(35 198 125)"
+        data-fg-eamk56="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:97:7:4175:103:e:ellipse"></ellipse>
+    <ellipse cx="198" cy="125" rx="11" ry="16" fill="#d4e0bc" transform="rotate(35 198 125)"
+        opacity="0.6"
+        data-fg-eamk57="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:98:7:4285:105:e:ellipse"></ellipse>
+    <ellipse cx="190" cy="160" rx="24" ry="34" fill="url(#leafGradient3)"
+        transform="rotate(20 190 160)"
+        data-fg-eamk58="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:100:7:4404:103:e:ellipse"></ellipse>
+    <ellipse cx="190" cy="160" rx="10" ry="14" fill="#dbe5c5" transform="rotate(20 190 160)"
+        opacity="0.6"
+        data-fg-eamk59="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:101:7:4514:105:e:ellipse"></ellipse>
+    <ellipse cx="140" cy="75" rx="32" ry="42" fill="url(#leafGradient2)"
+        data-fg-eamk61="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:104:7:4681:71:e:ellipse"></ellipse>
+    <ellipse cx="140" cy="75" rx="14" ry="20" fill="#d4e0bc" opacity="0.7"
+        data-fg-eamk62="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:105:7:4759:73:e:ellipse"></ellipse>
+    <ellipse cx="120" cy="105" rx="28" ry="38" fill="url(#leafGradient1)"
+        transform="rotate(-15 120 105)"
+        data-fg-eamk63="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:107:7:4846:104:e:ellipse"></ellipse>
+    <ellipse cx="120" cy="105" rx="12" ry="16" fill="#e8edd9" transform="rotate(-15 120 105)"
+        opacity="0.6"
+        data-fg-eamk64="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:108:7:4957:106:e:ellipse"></ellipse>
+    <ellipse cx="160" cy="105" rx="28" ry="38" fill="url(#leafGradient1)"
+        transform="rotate(15 160 105)"
+        data-fg-eamk65="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:110:7:5077:103:e:ellipse"></ellipse>
+    <ellipse cx="160" cy="105" rx="12" ry="16" fill="#e8edd9" transform="rotate(15 160 105)"
+        opacity="0.6"
+        data-fg-eamk66="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:111:7:5187:105:e:ellipse"></ellipse>
+    <ellipse cx="110" cy="135" rx="18" ry="26" fill="url(#leafGradient3)"
+        transform="rotate(-10 110 135)"
+        data-fg-eamk68="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:114:7:5357:104:e:ellipse"></ellipse>
+    <ellipse cx="170" cy="135" rx="18" ry="26" fill="url(#leafGradient3)"
+        transform="rotate(10 170 135)"
+        data-fg-eamk69="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:115:7:5468:103:e:ellipse"></ellipse>
+    <g transform="translate(205, 55)"
+        data-fg-eamk71="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:118:7:5629:864:e:g">
+        <ellipse cx="-3" cy="-2" rx="10" ry="12" fill="url(#cloverGradient)"
+            transform="rotate(-45 -3 -2)"
+            data-fg-eamk73="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:120:9:5702:101:e:ellipse"></ellipse>
+        <ellipse cx="3" cy="-2" rx="10" ry="12" fill="url(#cloverGradient)"
+            transform="rotate(45 3 -2)"
+            data-fg-eamk74="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:121:9:5812:98:e:ellipse"></ellipse>
+        <ellipse cx="-3" cy="4" rx="10" ry="12" fill="url(#cloverGradient)"
+            transform="rotate(-135 -3 4)"
+            data-fg-eamk75="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:122:9:5919:100:e:ellipse"></ellipse>
+        <ellipse cx="3" cy="4" rx="10" ry="12" fill="url(#cloverGradient)"
+            transform="rotate(135 3 4)"
+            data-fg-eamk76="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:123:9:6028:97:e:ellipse"></ellipse>
+        <circle cx="0" cy="1" r="3" fill="#6b7a3c"
+            data-fg-eamk78="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:125:9:6167:45:e:circle"></circle>
+        <line x1="0" y1="5" x2="0" y2="18" stroke="#5a6932" stroke-width="2.5"
+            stroke-linecap="round"
+            data-fg-eamk80="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:127:9:6242:94:e:line"></line>
+        <ellipse cx="-2" cy="-1" rx="4" ry="5" fill="#ffffff" opacity="0.4"
+            transform="rotate(-45 -2 -1)"
+            data-fg-eamk82="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:129:9:6382:100:e:ellipse"></ellipse>
+    </g>
+    <path d="M 95 200 L 108 242 L 172 242 L 185 200 Z" fill="url(#potGradient)"
+        data-fg-eamk84="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:133:7:6549:100:e:path"></path>
+    <path d="M 95 200 L 108 242 L 172 242 L 185 200 Z" fill="none" stroke="#9d4f37" stroke-width="2"
+        data-fg-eamk85="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:137:7:6656:136:e:path"></path>
+    <rect x="90" y="195" width="100" height="12" fill="#d4876f" rx="2"
+        data-fg-eamk87="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:145:7:6828:69:e:rect"></rect>
+    <rect x="90" y="195" width="100" height="4" fill="#e5a892" rx="1"
+        data-fg-eamk88="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:146:7:6904:68:e:rect"></rect>
+    <rect x="100" y="215" width="80" height="3" fill="#e5a892" opacity="0.5"
+        data-fg-eamk90="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:149:7:7020:75:e:rect"></rect>
+    <ellipse cx="125" cy="218" rx="18" ry="12" fill="white" opacity="0.25"
+        data-fg-eamk92="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:152:7:7143:73:e:ellipse"></ellipse>
+    <ellipse cx="120" cy="200" rx="25" ry="4" fill="white" opacity="0.3"
+        data-fg-eamk93="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:153:7:7223:71:e:ellipse"></ellipse>
+    <ellipse cx="140" cy="200" rx="45" ry="8" fill="#6b5a3d"
+        data-fg-eamk95="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:156:7:7327:59:e:ellipse"></ellipse>
+    <ellipse cx="140" cy="200" rx="38" ry="6" fill="#5a4a2e"
+        data-fg-eamk96="4.19:11.8162:/src/app/components/LuckyShrubLogo.tsx:157:7:7393:59:e:ellipse"></ellipse>
+</svg>
