@@ -609,7 +609,8 @@ color: #ffff;
 .card-1{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     text-align: center;
@@ -630,6 +631,12 @@ color: #ffff;
     color: var(--white);
     transition: 0.5s;
     transform: translateY(-5px);
+}
+
+.card-1 img{
+     width: 100%;
+     height: 180px;
+     object-fit: cover;
 }
 
 .container-1 {
