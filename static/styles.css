@@ -606,6 +606,10 @@ color: #ffff;
     gap: 20px;
 }
 
+.cards-container h4{
+    font-weight: bold;
+}
+
 .card-1{
     display: flex;
     flex-direction: column;
