@@ -365,7 +365,6 @@ color: #ffff;
     padding-bottom: 40px;
     flex-wrap: wrap;
     height: auto;
-    max-height: 280px;
 }
 
 .footer-logo{
@@ -574,6 +573,7 @@ color: #ffff;
     .grid-container{
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr auto;
+        display: block;
     }
 
     .img-story-wrapper,
@@ -631,16 +631,29 @@ color: #ffff;
         display: none;
     }
 
+    main{
+        flex-grow: 1;
+    }
+
     .figure-wrapper{
         justify-content: flex-start;
         padding-right: 20px;
         overflow-x: auto;
     }
 
+    .footer-1{
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
     .footer-inner{
         flex-direction: column;
-        align-items: flex-start;
+       text-align: center;
         gap: 40px;
+        align-items: center;
+        height: auto;
+        max-height: none;
     }
 
     .footer-columns{
