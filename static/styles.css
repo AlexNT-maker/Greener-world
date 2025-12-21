@@ -82,19 +82,20 @@ header{
     grid-area: navbar-placeholder;
 }
 
+.nav-bar{
+    display: flex;
+}
 
 .nav-bar ul{
 list-style-type: none;
 margin: 0;
 padding: 0;
 display: flex;
+flex-direction: row;
 box-sizing:border-box;
 gap: 1.5rem;
 transform: none;
 max-width: 100%;
-
-
-
 }
 
 
@@ -104,7 +105,6 @@ max-width: 100%;
     text-decoration: none;
     font-size: larger;
     font-family: 'Courier New', Courier, monospace;
-
 }
 
 .nav-bar a:hover{
@@ -112,6 +112,19 @@ max-width: 100%;
     color: #000;
 }
 
+.hamburger{
+    display: none;
+    cursor: pointer ;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--white);
+}
 
 .contact{
     
@@ -546,10 +559,17 @@ color: #ffff;
 @media screen and (max-width: 768px){
 
     header {
-        flex-direction: column;
-        height: auto;
-        gap: 20px;
-        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .hamburger{
+        display: block;
+        z-index: 100;
     }
 
     .header-left {
@@ -558,17 +578,49 @@ color: #ffff;
         gap: 10px;
     }
 
+    .nav-bar{
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+        order: 3;
+        align-items: center;
+        background-color: var(--primary-green);
+        padding-bottom: 20px;
+        border-top: 1px solid rgba(255,255,255,0.3);
+    }
+
     .nav-bar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    .nav-bar ul li{
+        width: auto;
+    }
+
+    .nav-bar.active{
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        display: flex;
-        gap: 1.5rem;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        justify-content: center;
+        background-color: var(--primary-green);
+        padding-bottom: 20px;
     }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
 
     .grid-container{
         grid-template-columns: 1fr;
@@ -667,6 +719,7 @@ color: #ffff;
     }
 
 }
+
 
 #job-details{
     white-space: pre-line;
