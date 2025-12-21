@@ -554,6 +554,7 @@ color: #ffff;
     display: block;
     justify-content: center;
     text-align: center;
+    margin-bottom: 80px;
 }
 
 @media screen and (max-width: 768px){
