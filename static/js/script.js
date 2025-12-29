@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // ----------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------
     // 1. Navbar Logic (Loading + Hamburger)
-    // ----------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------
     const placeholder = document.getElementById("navbar-placeholder");
 
     if (placeholder) {
@@ -33,15 +33,114 @@ document.addEventListener("DOMContentLoaded", function() {
                         navMenu.classList.remove("active");
                     }));
                 }
+
+                updateCartBadge();
             })
             .catch(error => {
                 console.error("Error fetching navbar", error);
             });
     }
 
-    // ----------------------------------------------------------------------------------
-    // 2. Carousel Code
-    // ----------------------------------------------------------------------------------
+    //Update for the red cycle on cart button 
+
+    function updateCartBadge(){
+     const cart = JSON.parse(localStorage.getItem('myCart')) || [];
+     const badge = document.getElementById("cart-count");
+     if (badge){
+        badge.innerText = cart.length;
+     }
+    }
+
+    //----------------------------------------------------------------------------------------------------------
+    // 2. PRODUCTS PAGE: Add to cart logic
+    //----------------------------------------------------------------------------------------------------------
+
+    const addToCartButtons = document.querySelectorAll ('.product-card .btn-success');
+
+    if (addToCartButtons.length > 0){
+        addToCartButtons.forEach (button => {
+            button.addEventListener('click', function(e) {
+                const card = e.target.closest ('.product-card'); 
+
+                const title = card.querySelector('h3').innerText ;
+                const priceText = card.querySelector('p').innerText ;
+                const price = parseFloat(priceText.replace('$', '')) ;
+                const imgSrc = card.querySelector('img').src ; 
+                
+                const product = {
+                    title: title,
+                    price: price,
+                    image: imgSrc
+                };
+
+                let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+
+                cart.push(product);
+
+                localStorage.getItem(myCart), JSON.stringify((cart));
+
+                updateCartBadge();
+
+                alert(`${title} added to cart!`);
+                
+            });
+        });
+    }
+
+    
+    //-----------------------------------------------------------------------------------------------------------
+    // 3.CART-PAGE: Render Items & Calculate Total
+    //-----------------------------------------------------------------------------------------------------------
+        
+      const cartContainer = document.getElementById('cart-items-container');
+      const totalPriceElement = document.getElementById('total-price');
+
+      if (cartContainer && totalPriceElement){
+        displayCartItems();
+      }
+
+      function displayCartItems() {
+        let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+        cartContainer.innerHTML = ''; 
+
+        if (cart.length === 0) {
+            cartContainer.innerHTML = '<tr><td colspan="4" class="empty-cart-msg">Your cart is empty. Go plant something! 🌿</td></tr>';
+            totalPriceElement.innerText = 'Total: 0$';
+            return;
+        }
+
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            total += item.price;
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><img src="${item.image}" class="cart-item-img" alt="${item.title}"></td>
+                <td>${item.title}</td>
+                <td>${item.price}$</td>
+                <td><button class="btn-remove" data-index="${index}">Remove</button></td>
+            `;
+            cartContainer.appendChild(row);
+        });
+
+        totalPriceElement.innerText = `Total: ${total}$`;
+
+        document.querySelectorAll('.btn-remove').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const indexToRemove = this.getAttribute('data-index');
+                cart.splice(indexToRemove, 1); 
+                localStorage.setItem('myCart', JSON.stringify(cart)); 
+                displayCartItems(); 
+                updateCartBadge(); 
+            });
+        });
+    }
+
+
+    // ----------------------------------------------------------------------------------------------------------
+    // 4. Carousel Code
+    // ----------------------------------------------------------------------------------------------------------
     const scrollLeftButton = document.getElementById("scroll-left");
     const scrollRightButton = document.getElementById("scroll-right");
     const row = document.querySelector(".figure-wrapper");
@@ -56,8 +155,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    //---------------------------------------------------------------------------------------------------------
+
     // ----------------------------------------------------------------------------------
-    // 3. Product Card Zoom
+    // 5. Product Card Zoom
     // ----------------------------------------------------------------------------------
     const allProductCards = document.querySelectorAll(".product-card");
     allProductCards.forEach(function(card){
@@ -67,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // ----------------------------------------------------------------------------------
-    // 4. Jobs Description Logic
+    // 6. Jobs Description Logic
     // ----------------------------------------------------------------------------------
     const jobData={
         'IT': { title: 'IT Specialist', description:`We are looking for a tech-savy individual...`, btnText:'Apply for this position' },
@@ -105,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ----------------------------------------------------------------------------------
-// 5. Loader Hidden
+// 7. Loader Hidden
 // ----------------------------------------------------------------------------------
 window.addEventListener("load", function(){
     const loader = document.getElementById("loader");
