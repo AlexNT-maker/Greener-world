@@ -16,56 +16,91 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 placeholder.innerHTML = data;
 
-                
                 const hamburger = document.querySelector(".hamburger");
                 const navMenu = document.querySelector(".nav-bar");
 
                 if(hamburger && navMenu){
-                    
                     hamburger.addEventListener("click", () => {
                         hamburger.classList.toggle("active");
                         navMenu.classList.toggle("active");
                     });
 
-                   
                     document.querySelectorAll(".nav-bar a").forEach(n => n.addEventListener("click", () => {
                         hamburger.classList.remove("active");
                         navMenu.classList.remove("active");
                     }));
                 }
 
-                updateCartBadge();
+                // Call update logic after navbar is loaded
+                updateAllBadges();
             })
             .catch(error => {
                 console.error("Error fetching navbar", error);
             });
     }
 
-    //Update for the red cycle on cart button 
+    // Update for the red cycle on cart button
+    function updateAllBadges(){
+        const cart = JSON.parse(localStorage.getItem('myCart')) || [];
+        const globalBadge = document.getElementById("cart-count");
+        
+        if (globalBadge){
+            if (cart.length === 0){
+                globalBadge.classList.add("badge-hidden"); 
+            }
+            else{
+                globalBadge.classList.remove("badge-hidden");
+                globalBadge.innerText = cart.length;
+            }
+        }
 
-    function updateCartBadge(){
-     const cart = JSON.parse(localStorage.getItem('myCart')) || [];
-     const badge = document.getElementById("cart-count");
-     if (badge){
-        badge.innerText = cart.length;
-     }
+        // 1B. We count how much we have from each
+        const counts = {};
+        cart.forEach(item => {
+            counts[item.title] = (counts[item.title] || 0) + 1;
+        });
+
+        const allCards = document.querySelectorAll('.product-card');
+        allCards.forEach(card => {
+            const titleElement = card.querySelector('h3');
+            // Check if title exists (to avoid errors on other pages)
+            if(titleElement){
+                const title = titleElement.innerText;
+                const count = counts[title] || 0;
+                let cardBadge = card.querySelector('.product-qty-badge');
+
+                if (count > 0) {
+                    if (!cardBadge){
+                        cardBadge = document.createElement('div');
+                        cardBadge.className = 'product-qty-badge';
+                        card.appendChild(cardBadge);
+                    }
+                    cardBadge.innerText = count; 
+                } else {
+                    if (cardBadge) {
+                        cardBadge.remove();
+                    }
+                }
+            }
+        });
     }
 
-    //----------------------------------------------------------------------------------------------------------
-    // 2. PRODUCTS PAGE: Add to cart logic
-    //----------------------------------------------------------------------------------------------------------
 
-    const addToCartButtons = document.querySelectorAll ('.product-card .btn-success');
+    // ---------------------------------------------------------------------------------------------------------
+    // 2. PRODUCTS PAGE: Add to cart logic
+    // ---------------------------------------------------------------------------------------------------------
+    const addToCartButtons = document.querySelectorAll('.product-card .btn-success');
 
     if (addToCartButtons.length > 0){
-        addToCartButtons.forEach (button => {
+        addToCartButtons.forEach(button => {
             button.addEventListener('click', function(e) {
-                const card = e.target.closest ('.product-card'); 
+                e.preventDefault(); 
+                const card = e.target.closest('.product-card'); 
 
-                const title = card.querySelector('h3').innerText ;
-                const priceText = card.querySelector('p').innerText ;
-                const price = parseFloat(priceText.replace('$', '')) ;
-                const imgSrc = card.querySelector('img').src ; 
+                const title = card.querySelector('h3').innerText;
+                const priceText = card.querySelector('p').innerText;
+                const price = parseFloat(priceText.replace('$', ''));
+                const imgSrc = card.querySelector('img').src; 
                 
                 const product = {
                     title: title,
@@ -77,35 +112,48 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 cart.push(product);
 
-                localStorage.getItem(myCart), JSON.stringify((cart));
+                // Fixed: Syntax error in setItem
+                localStorage.setItem('myCart', JSON.stringify(cart));
 
-                updateCartBadge();
+                updateAllBadges();
 
-                alert(`${title} added to cart!`);
-                
+                // alert(`${title} added to cart!`);
             });
         });
     }
 
-    
-    //-----------------------------------------------------------------------------------------------------------
+    // Logic for contact buttons scroll (attached here to keep it clean)
+    const contactButtons = document.querySelectorAll('.product-card .btn-info');
+    const footer = document.querySelector('footer');
+
+    if (contactButtons.length > 0 && footer) {
+        contactButtons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                footer.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    }
+
+
+    // ---------------------------------------------------------------------------------------------------------
     // 3.CART-PAGE: Render Items & Calculate Total
-    //-----------------------------------------------------------------------------------------------------------
-        
-      const cartContainer = document.getElementById('cart-items-container');
-      const totalPriceElement = document.getElementById('total-price');
+    // ---------------------------------------------------------------------------------------------------------
+    const cartContainer = document.getElementById('cart-items-container');
+    const totalPriceElement = document.getElementById('total-price');
 
-      if (cartContainer && totalPriceElement){
+    if (cartContainer && totalPriceElement){
         displayCartItems();
-      }
+    }
 
-      function displayCartItems() {
+    function displayCartItems() {
         let cart = JSON.parse(localStorage.getItem('myCart')) || [];
         cartContainer.innerHTML = ''; 
 
         if (cart.length === 0) {
             cartContainer.innerHTML = '<tr><td colspan="4" class="empty-cart-msg">Your cart is empty. Go plant something! 🌿</td></tr>';
             totalPriceElement.innerText = 'Total: 0$';
+            updateAllBadges();
             return;
         }
 
@@ -132,15 +180,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 cart.splice(indexToRemove, 1); 
                 localStorage.setItem('myCart', JSON.stringify(cart)); 
                 displayCartItems(); 
-                updateCartBadge(); 
+                updateAllBadges(); 
             });
         });
     }
 
 
-    // ----------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------
     // 4. Carousel Code
-    // ----------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------
     const scrollLeftButton = document.getElementById("scroll-left");
     const scrollRightButton = document.getElementById("scroll-right");
     const row = document.querySelector(".figure-wrapper");
@@ -155,17 +203,20 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    //---------------------------------------------------------------------------------------------------------
 
     // ----------------------------------------------------------------------------------
     // 5. Product Card Zoom
     // ----------------------------------------------------------------------------------
     const allProductCards = document.querySelectorAll(".product-card");
     allProductCards.forEach(function(card){
-        card.addEventListener("click", function(){
-            card.classList.toggle("zoomed");
+        card.addEventListener("click", function(e){
+            // Fix: Do not zoom if we click a button
+            if (e.target.tagName !== 'BUTTON') {
+                card.classList.toggle("zoomed");
+            }
         });
     });
+
 
     // ----------------------------------------------------------------------------------
     // 6. Jobs Description Logic
